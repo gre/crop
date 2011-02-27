@@ -1,0 +1,44 @@
+/**
+ * app.css
+ */
+
+* {
+    font-size:10pt;
+    color: black;
+}
+
+#main-container{
+
+}
+
+.image-cropper {
+
+}
+
+.image {
+    border: 1px solid black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.selection {
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+#crop-button {
+    border: 1px solid black;
+    background:red;
+    width:200px;
+    text-align:center;
+    z-index: 400;
+    top:0;
+    position:absolute;
+    margin-top:10px;
+    margin-left:10px;
+}
