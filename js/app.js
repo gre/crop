@@ -25,6 +25,11 @@ function onReady() {
                 evt.preventDefault();
                 evt.stopPropagation();
         }, false);
+
+        $("classic-file-input").addEventListener("change", function (evt) {
+            var newfile = evt.target.files[0];
+            Crop.addImage(newfile);
+        }, false);
     }
     else {
         alert("No Crop!!!");

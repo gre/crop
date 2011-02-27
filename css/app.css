@@ -8,7 +8,6 @@
 }
 
 #main-container{
-
 }
 
 .image-cropper {
@@ -18,7 +17,7 @@
 .image {
     border: 1px solid black;
     position: absolute;
-    top: 0;
+    top: 50px;
     left: 0;
     z-index: 2;
 }
@@ -26,19 +25,23 @@
 .selection {
     opacity: 0.4;
     position: absolute;
-    top: 0;
+    top: 50px;
     left: 0;
     z-index: 3;
 }
 
+.classic-user-input {
+    margin-top:15px;
+}
 #crop-button {
+    display:inline;
     border: 1px solid black;
     background:red;
-    width:200px;
+    width:400px;
     text-align:center;
+    top:10px;
     z-index: 400;
-    top:0;
-    position:absolute;
-    margin-top:10px;
+    padding:10px;
+    margin-top:20px;
     margin-left:10px;
 }
