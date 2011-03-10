@@ -7,25 +7,20 @@
     color: black;
 }
 
-#main-container{
-}
-
 .image-cropper {
-
+    padding-top:30px;
+    margin:auto;
 }
 
-.image {
-    border: 1px solid black;
+.cropcrop-image {
     position: absolute;
-    top: 50px;
     left: 0;
     z-index: 2;
 }
 
-.selection {
-    opacity: 0.4;
+.cropcrop-selection {
+    opacity: 1;
     position: absolute;
-    top: 50px;
     left: 0;
     z-index: 3;
 }

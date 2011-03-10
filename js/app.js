@@ -18,7 +18,6 @@ function onReady() {
                 evt.preventDefault();
                 evt.stopPropagation();
                 Crop.crop();
-                //console.log(Crop.getImage());
         }, false);
 
         $("crop-button").addEventListener("selectstart", function (evt) {
