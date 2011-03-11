@@ -12,22 +12,10 @@
     margin:auto;
 }
 
-.cropcrop-image {
-    position: absolute;
-    left: 0;
-    z-index: 2;
-}
-
-.cropcrop-selection {
-    opacity: 1;
-    position: absolute;
-    left: 0;
-    z-index: 3;
-}
-
 .classic-user-input {
     margin-top:15px;
 }
+
 #crop-button {
     display:inline;
     border: 1px solid black;
