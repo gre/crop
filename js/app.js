@@ -7,7 +7,8 @@ function onReady() {
     function $(id) { return document.getElementById(id);}
 
     if (Crop.isPossible()) {
-        Crop.init({ 
+        
+        Crop.init({
             cls: "image-cropper",
             height:400,
             width:600,
@@ -30,6 +31,15 @@ function onReady() {
             Crop.addImage(newfile);
         }, false);
         
+        $('keepRatio').addEventListener('change', function(e) {
+          if(e.target.checked) {
+            Crop.setRatioConstraint(Crop.getSelectionWidth(), Crop.getSelectionHeight());
+          }
+          else {
+            Crop.removeRatioConstraint();
+          }
+        }, false);
+        
         var selections = $('selections').childNodes
         for(var s=0; s<selections.length; ++s) {
           var selection = selections[s];
@@ -39,7 +49,7 @@ function onReady() {
                 e.preventDefault();
                 Crop.select(parseInt(selection.attributes['data-sx'].value), 
                             parseInt(selection.attributes['data-sy'].value),
-                            selection.attributes['data-keepRatio'] && selection.attributes['data-keepRatio'].value=='true');
+                            $('keepRatio').checked);
               }, false);
             })(selection);
           }
