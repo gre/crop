@@ -7,7 +7,7 @@ function onReady() {
     function $(id) { return document.getElementById(id);}
 
     if (Crop.isPossible()) {
-        Crop.init({ 
+        Crop.init({
             cls: "image-cropper",
             height:400,
             width:600,
