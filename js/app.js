@@ -29,6 +29,21 @@ function onReady() {
             var newfile = evt.target.files[0];
             Crop.addImage(newfile);
         }, false);
+        
+        var selections = $('selections').childNodes
+        for(var s=0; s<selections.length; ++s) {
+          var selection = selections[s];
+          if(selection.className==='selection') {
+            (function(selection){
+              selection.addEventListener('click', function(e){
+                e.preventDefault();
+                Crop.select(parseInt(selection.attributes['data-sx'].value), 
+                            parseInt(selection.attributes['data-sy'].value),
+                            selection.attributes['data-keepRatio'] && selection.attributes['data-keepRatio'].value=='true');
+              }, false);
+            })(selection);
+          }
+        }
     }
     else {
         alert("No Crop!!!");
